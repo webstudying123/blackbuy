@@ -8,6 +8,7 @@ Vue.config.productionTip = false;
 
 //引入index.vue
 import index from './components/index.vue'
+import cart from './components/cart.vue'
 //导入路由
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
@@ -15,7 +16,8 @@ Vue.use(VueRouter)
 //路由规则
 let routes=[
   {path:'/',component:index},
-  {path:'/index',component:index}
+  {path:'/index',component:index},
+  {path:'/cart',component:cart}
 ]
 //实例路由
 let router =new VueRouter({
