@@ -80,7 +80,8 @@
             </div>
         </div>
     </div>
-  <!-- 中间 -->
+  <!-- 中间 路由显示区域-->
+  <router-view></router-view>
   <!-- 底部 -->
   <div class="footer">
                 <div class="section">
