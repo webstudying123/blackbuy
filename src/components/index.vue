@@ -159,14 +159,14 @@
                     <!--/幻灯片-->
                     <div class="left-220">
                         <ul class="side-img-list">
-                            <li v-for='(item,index) in toplist'>
+                            <li v-for='(item,index) in toplist' :key="index">
                                 <div class="img-box">
                                     <label>{{index+1}}</label>
                                     <img :src="item.img_url">
                                 </div>
                                 <div class="txt-box">
                                     <a href="/goods/show-98.html">{{item.title}}</a>
-                                    <span>{{item.add_time}}</span>
+                                    <span>{{item.add_time | formattime}}</span>
                                 </div>
                             </li>
                         </ul>
@@ -558,6 +558,7 @@
 
 <script>
 import axios from 'axios'
+import moment from 'moment'
 export default {
     name:'首页',
     data(){
@@ -575,6 +576,12 @@ export default {
             this.toplist=res.data.message.toplist;
         })
     },
+    filters:{
+        //用到过滤器处理时间
+        formattime(index){
+            return moment(index).format('YYYY-MM-DD');
+        }
+    }
 }
 </script>
 
