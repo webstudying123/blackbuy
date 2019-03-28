@@ -4,6 +4,13 @@ import App from './App.vue'
 //引入全局的静态资源
 import './assets/statics/site/css/style.css'
 
+
+//引入axios
+import axios from 'axios'
+Vue.prototype.$axios=axios
+
+axios.defaults.baseURL='http://111.230.232.110:8899/'
+
 Vue.config.productionTip = false;
 
 //引入index.vue
