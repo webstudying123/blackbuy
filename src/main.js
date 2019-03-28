@@ -4,6 +4,11 @@ import App from './App.vue'
 //引入全局的静态资源
 import './assets/statics/site/css/style.css'
 
+//计数器,饿了么插件
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
 
 //引入axios
 import axios from 'axios'
