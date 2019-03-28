@@ -166,7 +166,7 @@
                                 </div>
                                 <div class="txt-box">
                                     <a href="/goods/show-98.html">{{item.title}}</a>
-                                    <span>{{item.add_time | formattime}}</span>
+                                    <span>{{item.add_time | globalformattime('YYYY年MM月DD日')}}</span>
                                 </div>
                             </li>
                         </ul>
@@ -219,7 +219,7 @@
 
 <script>
 // import axios from 'axios'
-import moment from 'moment'
+// import moment from 'moment'
 export default {
     name:'首页',
     data(){
@@ -245,12 +245,12 @@ export default {
             this.goodslist=res.data.message;
         })
     },
-    filters:{
-        //用到过滤器处理时间
-        formattime(index){
-            return moment(index).format('YYYY-MM-DD');
-        }
-    }
+    // filters:{
+    //     //用到过滤器处理时间
+    //     formattime(index){
+    //         return moment(index).format('YYYY-MM-DD');
+    //     }
+    // }
 }
 </script>
 
